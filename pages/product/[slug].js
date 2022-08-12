@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   AiOutlineMinus,
   AiOutlinePlus,
@@ -7,22 +7,29 @@ import {
 } from "react-icons/ai";
 
 import { client, urlFor } from "../../lib/client";
-import { Product } from '../../components'
+import { Product } from "../../components";
 
 const ProductDetails = ({ product, products }) => {
   const { image, name, details, price } = product;
+  const [index, setIndex] = useState(0);
   return (
     <div>
       <div className="product-detail-container">
         <div>
           <div className="image-container">
-            <img src={urlFor(image && image[0])} alt="" />
+            <img src={urlFor(image && image[index])} alt="" />
           </div>
-          {/* <div className="small-images-container">
+          <div className="small-images-container">
             {image?.map((item, i) => (
-              <img src={urlFor(item)} className="" onMouseEnter="" />
+              <img
+                src={urlFor(item)}
+                className={
+                  i === index ? "small-image selected-image" : "small-image"
+                }
+                onMouseEnter={() => setIndex(i)}
+              />
             ))}
-          </div> */}
+          </div>
         </div>
         <div className="product-detail-desc">
           <h1>{name}</h1>
@@ -71,7 +78,9 @@ const ProductDetails = ({ product, products }) => {
         <h2>You may also like</h2>
         <div className="marquee">
           <div className="maylike-products-container track">
-            {products.map((item) => (<Product key={item.id} product={item} />))}
+            {products.map((item) => (
+              <Product key={item.id} product={item} />
+            ))}
           </div>
         </div>
       </div>
