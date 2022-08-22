@@ -12,14 +12,18 @@ const Navbar = () => {
       <p className="logo">
         <Link href="/"> Creamson Tea</Link>
       </p>
-      <button
-        type="button"
-        className="cart-icon"
-        onClick={() => setShowCart(true)}
-      >
-        <AiOutlineShopping />
-        <span className="cart-item-qty">{totalQuantities}</span>
-      </button>
+      <div className="login-cart-container">
+        <Link href="/login">Login</Link>
+        <button
+          type="button"
+          className="cart-icon"
+          onClick={() => setShowCart(true)}
+        >
+          <AiOutlineShopping />
+          <span className="cart-item-qty">{totalQuantities}</span>
+        </button>
+      </div>
+
       {showCart && <Cart />}
     </div>
   );

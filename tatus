@@ -1,0 +1,77 @@
+[33mcommit 86a770ec5804b2f07fa1891e74a16cb6c966c112[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Ilix-studio <ilishjyoti17@gmail.com>
+Date:   Thu Aug 18 15:20:11 2022 +0530
+
+    update and remove item functionality were done
+
+[33mcommit 4b8faaefcddd2b147b4bd9adb24ada6dd295e9b8[m
+Author: Ilix-studio <ilishjyoti17@gmail.com>
+Date:   Thu Aug 18 13:24:15 2022 +0530
+
+    cart logic added
+
+[33mcommit af668fa4c12a8af5213b570c3a9e0f98bca76c94[m
+Author: Ilix-studio <ilishjyoti17@gmail.com>
+Date:   Wed Aug 17 14:28:49 2022 +0530
+
+    addn to cart functionality is added
+
+[33mcommit 994eea27b1f3bf9b35e3d985e0ded77b8a5d567a[m
+Author: Ilix-studio <ilishjyoti17@gmail.com>
+Date:   Wed Aug 17 04:15:50 2022 +0530
+
+    increace && decrease qty is added as temporary
+
+[33mcommit 580c7f4426758c3e4e0edd2851a1885f30efd9cf[m
+Author: Ilix-studio <ilishjyoti17@gmail.com>
+Date:   Tue Aug 16 12:39:52 2022 +0530
+
+    StateContext is created && wrap the entire application in _app.js
+
+[33mcommit 44d1e2ba335dabb4ccf3fc277731499d4e7dc0db[m
+Author: Ilix-studio <ilishjyoti17@gmail.com>
+Date:   Fri Aug 12 14:32:20 2022 +0530
+
+    implemented small image
+
+[33mcommit 1c61b9ea103acf68862be1ea242f5f49c1390a79[m
+Author: Ilix-studio <ilishjyoti17@gmail.com>
+Date:   Fri Aug 12 08:45:54 2022 +0530
+
+    added slug && made them moving
+
+[33mcommit ed474513d836ae4011ddcdba294a1db8bab572a6[m
+Author: Ilix-studio <ilishjyoti17@gmail.com>
+Date:   Thu Aug 11 01:21:16 2022 +0530
+
+    fetch data from a specific product to render product detail page using using getStaticProps & grtStaticPaths
+
+[33mcommit 31e9710e2d5a6fb6d384831fa08c446b644eb750[m
+Author: Ilix-studio <ilishjyoti17@gmail.com>
+Date:   Thu Aug 4 02:11:40 2022 +0530
+
+    special item banner is just created
+
+[33mcommit 8f02b8eabc4b91b8d32bfd10e1c6bc96c5cd916d[m
+Author: Ilix-studio <ilishjyoti17@gmail.com>
+Date:   Tue Aug 2 00:02:24 2022 +0530
+
+    Product component is made and data fetch from sanity db
+
+[33mcommit 883b9dc17dd75636391f7854741ab7abfffc6e93[m
+Author: Ilix-studio <ilishjyoti17@gmail.com>
+Date:   Sat Jul 30 01:54:34 2022 +0530
+
+    banner part done
+
+[33mcommit fa555b8df991ea91839b78c0e9c2159a9d1ce57b[m
+Author: Ilix-studio <ilishjyoti17@gmail.com>
+Date:   Mon Jul 25 05:25:13 2022 +0530
+
+    made components, connected sanity, fetch data from sanity, Layout made
+
+[33mcommit 78c6b4d70cf9ea5486d39c28c9826aafd34af562[m
+Author: Ilix-studio <ilishjyoti17@gmail.com>
+Date:   Fri Jul 22 03:44:51 2022 +0530
+
+    setup done

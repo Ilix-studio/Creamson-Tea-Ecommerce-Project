@@ -31,6 +31,9 @@ a {
   margin: 6px 18px;
   position: relative;
 }
+.login-cart-container{
+  display: flex;
+}
 .marquee-text {
   font-size: 29px;
   font-weight: 600;
