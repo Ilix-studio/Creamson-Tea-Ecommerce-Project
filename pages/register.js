@@ -4,6 +4,8 @@ import React from "react";
 import NextLink from "next/link";
 import { useForm, Controller } from "react-hook-form";
 import Form from "../components/Form";
+import toast from "react-hot-toast";
+import axios from "axios";
 
 const RegisterScreen = () => {
   const {
@@ -11,7 +13,19 @@ const RegisterScreen = () => {
     control,
     formState: { errors },
   } = useForm();
-  const submitHandler = async ({name, email, password, confirmPassword}) => {};
+  const submitHandler = async ({ name, email, password, confirmPassword }) => {
+    if (password !== confirmPassword) {
+      toast.error("Passwords didn't match");
+      return;
+    }
+    try {
+      const {data} = await axios.post('/api/users/register', {
+        name, email, password
+      })
+    } catch (error) {
+      toast.error("This didn't work.")
+    }
+  };
   return (
     <div>
       <Form onSubmit={handleSubmit(submitHandler)}>
@@ -143,15 +157,15 @@ const RegisterScreen = () => {
 
           <ListItem>
             <Button variant="contained" type="submit" fullWidth color="primary">
-              Register 
+              Register
             </Button>
           </ListItem>
           <ListItem>
-            Already have an account?{' '}
-            <NextLink href={'/login'} passHref>
-                <Link >
-               <u>  Login  </u>
-                </Link>
+            Already have an account?{" "}
+            <NextLink href={"/login"} passHref>
+              <Link>
+                <u> Login </u>
+              </Link>
             </NextLink>
           </ListItem>
         </List>
