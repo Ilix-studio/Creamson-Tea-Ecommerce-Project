@@ -28,7 +28,6 @@ const ProductDetails = ({ product, products }) => {
           <div className="image-container">
             <img
               src={urlFor(image && image[index])}
-              alt=""
               className="product-detail-image"
             />
           </div>
