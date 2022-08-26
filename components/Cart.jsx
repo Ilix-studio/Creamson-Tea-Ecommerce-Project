@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-import React, { useRef } from "react";
-import Link from "next/link";
-import {
-  AiOutlineMinus,
-  AiOutlinePlus,
-  AiOutlineLeft,
-  AiOutlineShopping,
-} from "react-icons/ai";
-import { TiDeleteOutline } from "react-icons/ti";
-import toast from "react-hot-toast";
-import { useStateContext } from "../context/StateContext";
-import { urlFor } from "../lib/client";
-import getStripe from "../lib/getStripe";
-
-const Cart = () => {
-  const cartRef = useRef();
-  const {
-    totalPrice,
-    totalQuantities,
-    cartItems,
-    setShowCart,
-    toggleCartItemQuanitity,
-    onRemove,
-  } = useStateContext();
-=======
 import React, { useRef } from 'react';
 import Link from 'next/link';
 import { AiOutlineMinus, AiOutlinePlus, AiOutlineLeft, AiOutlineShopping } from 'react-icons/ai';
@@ -37,38 +11,18 @@ import getStripe from '../lib/getStripe';
 const Cart = () => {
   const cartRef = useRef();
   const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuanitity, onRemove } = useStateContext();
->>>>>>> successPage
 
   const handleCheckout = async () => {
     const stripe = await getStripe();
 
-<<<<<<< HEAD
-    const response = await fetch("/api/stripe", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-=======
     const response = await fetch('/api/stripe', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
->>>>>>> successPage
       },
       body: JSON.stringify(cartItems),
     });
 
-<<<<<<< HEAD
-    if (response.statusCode === 500) return;
-
-    const data = await response.json();
-
-    toast.loading("Redirecting...");
-
-    stripe.redirectToCheckout({ sessionId: data.id });
-  };
-
-  // jsx for cart Container
-=======
     if(response.statusCode === 500) return;
     
     const session = await response.json();
@@ -78,7 +32,6 @@ const Cart = () => {
     stripe.redirectToCheckout({  sessionId: session.id, });
   }
 
->>>>>>> successPage
   return (
     <div className="cart-wrapper" ref={cartRef}>
       <div className="cart-container">
