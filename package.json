@@ -11,7 +11,7 @@
   "dependencies": {
     "@sanity/client": "^3.3.2",
     "@sanity/image-url": "^1.0.1",
-    "@stripe/stripe-js": "^1.35.0",
+    "@stripe/stripe-js": "^1.25.0",
     "canvas-confetti": "^1.5.1",
     "next": "12.2.2",
     "next-sanity-image": "^3.2.1",
@@ -19,7 +19,7 @@
     "react-dom": "18.2.0",
     "react-hot-toast": "^2.3.0",
     "react-icons": "^4.4.0",
-    "stripe": "^10.4.0"
+    "stripe": "^8.209.0"
   },
   "devDependencies": {
     "eslint": "8.20.0",
